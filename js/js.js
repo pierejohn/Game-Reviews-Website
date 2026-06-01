@@ -159,7 +159,7 @@ function addClick() {
         desiredElement=element
         localStorage.setItem("desiredElement", JSON.stringify(desiredElement));
         console.log(desiredElement);
-        window.location.href = "html/pageInfo.html";
+        window.location.href = "pageInfo.html";
       }
     });
     

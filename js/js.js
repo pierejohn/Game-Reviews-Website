@@ -1,3 +1,9 @@
+
+window.onload = function () {
+    localStorage.removeItem("desiredElement");
+    window.scrollTo(0, 0);
+};
+
 let offsetbegin;
 
 $(document).ready(function () {

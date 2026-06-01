@@ -1,8 +1,19 @@
+$(window).on("load", function () {
+    $(".loading").fadeOut(300);
+});
 
 let desiredElement = JSON.parse(localStorage.getItem("desiredElement"));
+
+if (!desiredElement) {
+    $('#gameInfo').html("<h2 class='text-white'>No game selected</h2>");
+    throw new Error("No game in localStorage");
+}
+
+let itemId = desiredElement.id;
+
+getDetalis(itemId);
 let detalis=''
-let itemId=`${desiredElement.id}`
-getDetalis(itemId)
+
 
 async function getDetalis(itemId) {
 
@@ -28,24 +39,39 @@ async function getDetalis(itemId) {
    
     
 
-function fillItem()
-{
-    let item=`
-<div class="col-lg-4">
-                <img class="w-100" src="${desiredElement.thumbnail}" alt="">
-            </div>
-            <div class="col-lg-8 text-white">
-                <h1 id="titel ">
-                    Title: ${desiredElement.title}
-                </h1>
-                <div class="d-flex flex-column mt-3 gap-2">
-                <h6>Category:<span class="px-2 rounded-2 ItemCaPlSta">${desiredElement.genre}</span> </h6>
-                <h6>Platform:<span class="px-2 rounded-2 ItemCaPlSta">${desiredElement.platform}</span> </h6>
-                <h6>Status:<span class="px-2 rounded-2 ItemCaPlSta">Live</span> </h6>
+function fillItem() {
+
+    let item = `
+        <div class="col-lg-4">
+            <img class="w-100" src="${detalis.thumbnail}" alt="">
+        </div>
+
+        <div class="col-lg-8 text-white">
+            <h1>Title: ${detalis.title}</h1>
+
+            <div class="d-flex flex-column mt-3 gap-2">
+
+                <h6>Category:
+                    <span class="px-2 rounded-2 ItemCaPlSta">${detalis.genre}</span>
+                </h6>
+
+                <h6>Platform:
+                    <span class="px-2 rounded-2 ItemCaPlSta">${detalis.platform}</span>
+                </h6>
+
+                <h6>Status:
+                    <span class="px-2 rounded-2 ItemCaPlSta">Live</span>
+                </h6>
+
                 <p class="fs-6">${detalis.description}</p>
-               <a class="btn btn-info" target="_blank" href="${desiredElement.game_url}">show Game</a>
+
+                <a class="btn btn-info" target="_blank" href="${detalis.game_url}">
+                    Show Game
+                </a>
+
             </div>
-            </div>
-`
-$('#gameInfo').html(item)
+        </div>
+    `;
+
+    $('#gameInfo').html(item);
 }

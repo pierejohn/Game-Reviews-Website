@@ -1,4 +1,8 @@
-var offsetbegin = Math.floor($('.navbar').offset().top);
+let offsetbegin;
+
+$(document).ready(function () {
+    offsetbegin = Math.floor($('.navbar').offset().top);
+});
 
 function removLoading() {
      $('body').css('overflow','auto');

@@ -4,73 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Game Reviews</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Bootstrap CSS (CDN - BEST PRACTICE) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9652c3fded.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div class="loading d-flex justify-content-center align-items-center">
-    <div class="loader"></div>
-</div>
-    <div class="navBg">
 
+    <div class="loading d-flex justify-content-center align-items-center">
+        <div class="loader"></div>
     </div>
-    <nav class="navbar navbar-expand-lg nav-defult-color container  rounded-4 translate-middle-y m-auto">
-        <div class="container-fluid d-flex justify-content-between ">
-            <div class="navbar-brand">
-                <img src="/images/logo-sm.png" alt="">
+
+    <div class="navBg"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg nav-defult-color container rounded-4 translate-middle-y m-auto">
+        <div class="container-fluid d-flex justify-content-between">
+
+            <div class="navbar-brand d-flex align-items-center gap-2">
+                <img src="./images/logo-sm.png" alt="">
                 <a class="navbar-brand text-white fs-6" href="#">Game Reviews</a>
             </div>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                    <li class="nav-item">
-                        <a class="nav-link" id="MMORPG"  >MMORPG</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="shooter" >SHOOTER</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="SAILING" >SAILING</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="PERMADEATH" >PERMADEATH</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="SUPERHERO" >SUPERHERO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="PIXEL" >PIXEL</a>
-                    </li>
 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item"><a class="nav-link" id="MMORPG">MMORPG</a></li>
+                    <li class="nav-item"><a class="nav-link" id="shooter">SHOOTER</a></li>
+                    <li class="nav-item"><a class="nav-link" id="SAILING">SAILING</a></li>
+                    <li class="nav-item"><a class="nav-link" id="PERMADEATH">PERMADEATH</a></li>
+                    <li class="nav-item"><a class="nav-link" id="SUPERHERO">SUPERHERO</a></li>
+                    <li class="nav-item"><a class="nav-link" id="PIXEL">PIXEL</a></li>
 
                 </ul>
-
             </div>
+
         </div>
     </nav>
 
+    <!-- CONTENT -->
     <div class="container">
-        <div id="RowForItems" class="row">
-
-        </div>
-        
+        <div id="RowForItems" class="row"></div>
     </div>
 
-    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="./js/js.js"></script>
 
-
-    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/9652c3fded.js" crossorigin="anonymous"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/js/js.js"></script>
 </body>
 
 </html>
